@@ -1,0 +1,42 @@
+<!-- dit is een html bestand voor de registreren pagina-->
+<!DOCTYPE html>
+<html lang="nl">
+    <head>
+        <meta http-equiv="Content-type" content="text/html" charset="UTF-8" />
+        <title>registreren</title>
+        <link rel="stylesheet" href="css/registreren.css">
+    </head>
+    <body>
+        <header>
+            <h1>Registreren</h1>
+        </header>
+        <main>
+            <form action="registreren.php" method="post" enctype="multipart/form-data">
+                <br>
+                <input required type="text" name="naam" placeholder="Naam" /><br><br>
+                <input required type="email" name="e-mail" placeholder="E-mail" /><br><br>
+                <input required type="password" name="password" placeholder="Wachtwoord" id="password"/> <br><br>
+                <input required type="password" name="password2" placeholder="Herhaal wachtwoord" oninput="check(this)"/> <br>
+                <script language='javascript' type='text/javascript'>
+                    function check(input) {
+                        if (input.value != document.getElementById('password').value) {
+                            input.setCustomValidity('De wachtwoord is niet dezelfde.');
+                        } else {
+                            // input is valid -- reset the error message
+                            input.setCustomValidity('');
+                        }
+                    }
+                </script>
+                <br>    
+                <input type="submit" name="submit" value="Registreren" />
+                <p>Heeft u al een account?</p>
+                <a href="index.html">
+                    <input type="button" name="annuleren" value="Inloggen"/> 
+                </a>
+            </form>
+        </main>
+        <footer>
+            <p>Deze website is gemaakt door Xander Robbemond voor de vak project.</p>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,28 @@
+<!-- Dit html bestand zorgt voor het bestaan van de inlog pagina-->
+<!DOCTYPE html>
+<html lang="nl">
+    <head>
+        <meta http-equiv="Content-type" content="text/html" charset="UTF-8" />
+        <title>inloggen</title>
+        <link rel="stylesheet" href="css/inloggen.css">
+    </head>
+    <body>
+        <header>
+            <h1>Inloggen</h1>
+        </header>
+        <main>
+            <form name="inloggen" method="post" enctype="multipart/form-data" action="inloggen.php">
+                <input placeholder="e-mail" type="email" name="e-mail" type="email" required><br><br>
+                <input placeholder="wachtwoord" type="password" name="wachtwoord" required/><br><br>
+                <input type="submit" name="inloggen" value="Inloggen" />
+                <br><p>Nog geen account?</p>
+                <a href="registreren.html">
+                    <input type="button" name="registreren" value="Registreren">
+                </a>
+            </form>
+        </main>
+        <footer>
+            <p>Deze website is gemaakt door Xander Robbemond voor de vak project.</p>
+        </footer>
+    </body>
+</html>
